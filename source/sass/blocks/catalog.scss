@@ -1,0 +1,27 @@
+.catalog {
+  background-color: $lightest-grey;
+}
+
+.catalog__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 50px 20px 44px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
+}
+
+.catalog__title {
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.catalog__subtitle {
+  margin-bottom: 20px;
+  text-align: center;
+}
