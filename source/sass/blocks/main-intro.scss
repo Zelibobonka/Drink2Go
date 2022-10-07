@@ -3,5 +3,26 @@
 }
 
 .main-intro__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 20px 20px 60px 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 60px 80px 308px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 30px 80px 79px 105px;
+  }
+}
+
+.main-intro__card {
+  margin: 0 auto;
+}
+
+.main-intro__slider {
+  position: relative;
   margin: 0 auto;
 }

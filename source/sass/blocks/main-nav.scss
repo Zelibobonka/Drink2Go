@@ -1,15 +1,24 @@
 .main-nav__wrapper {
+  position: relative;
   display: flex;
   align-items: center;
 }
 
 .main-nav__toggle {
-  width: 26px;
-  height: 22px;
-  padding: 5px;
+  min-width: 60px;
+  height: 60px;
+  padding: 0;
   background-image: url("../img/icons/menu.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: $base-white;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &:active {
+    background-color: $base-secondary;
+  }
 }

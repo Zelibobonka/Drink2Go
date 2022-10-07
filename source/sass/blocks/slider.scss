@@ -1,0 +1,131 @@
+.slider {
+  position: relative;
+}
+
+.slider__scroll-wrapper {
+  position: relative;
+}
+
+.slider__button {
+  position: absolute;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+
+  &--left {
+    top: -282px;
+    left: -23px;
+    padding: 8px 6px 8px 10px;
+
+    @media (min-width: $tablet-width) {
+      top: -27px;
+      left: -53px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -624px;
+      left: -102px;
+      padding: 340px 30px 340px 34px;
+    }
+
+    &:active {
+      background: linear-gradient(to right, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));
+    }
+  }
+
+  &--right {
+    top: -282px;
+    right: -23px;
+    padding: 8px 10px 8px 6px;
+
+    @media (min-width: $tablet-width) {
+      top: -27px;
+      right: -53px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -624px;
+      right: -77px;
+      padding: 340px 34px 340px 30px;
+    }
+
+    &:active {
+      background: linear-gradient(to left, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $base-white;
+    outline: none;
+  }
+
+  &:disabled:hover,
+  &:disabled:focus-visible,
+  &:disabled:active {
+    background: transparent;
+  }
+
+  &:disabled .slider__scroll {
+    border-top: 2px solid $base-grey;
+    border-right: 2px solid $base-grey;
+  }
+}
+
+.slider__scroll {
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-top: 2px solid $base-primary;
+  border-right: 2px solid $base-primary;
+
+  &--left {
+    transform: rotate(-135deg);
+  }
+
+  &--right {
+    transform: rotate(45deg);
+  }
+}
+
+.slider__pagination-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: -7px;
+    left: 41%;
+    display: flex;
+  }
+}
+
+.slider__pagination-item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.slider__pagination-button {
+  width: 62px;
+  height: 4px;
+  padding: 0;
+  background-color: $base-white;
+  border: none;
+
+  &--current {
+    background-color: $base-primary;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $primary-opacity;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $base-primary;
+  }
+}

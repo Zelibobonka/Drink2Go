@@ -1,12 +1,44 @@
-.main-footer {
-  width: 320px;
-  margin: 0 auto;
+.main-footer__map {
+  height: 420px;
+  background-color: tomato;
 
   @media (min-width: $tablet-width) {
-    width: 768px;
+    height: 480px;
   }
 
   @media (min-width: $desktop-width) {
+    height: 540px;
+  }
+}
+
+.main-footer__logo-social-wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 22px 20px 0;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 42px 20px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
     width: 1440px;
+    padding: 40px 40px 3px;
+  }
+}
+
+.main-footer__social {
+  @media (min-width: $desktop-width) {
+    padding-right: 30px;
+    width: 318px;
+  }
+}
+
+.main-footer__nav-wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.97fr;
+    gap: 20px;
   }
 }

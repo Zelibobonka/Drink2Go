@@ -1,0 +1,120 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    justify-content: end;
+  }
+}
+
+.pagination__item {
+  position: relative;
+}
+
+.pagination__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 24px;
+  line-height: 24px;
+  color: $base-primary;
+  background-color: $base-white;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+
+  &--first {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &--last {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  & span {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
+  &--current {
+    font-weight: 600;
+    color: $base-black;
+    background-color: transparent;
+
+    @media (min-width: $tablet-width) {
+      min-width: 5px;
+      margin: 0 20px;
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $primary-lighter;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+}
+
+.pagination__link--prev {
+  @media (min-width: $tablet-width) {
+    width: 132px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 18px;
+    left: 20px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid $base-primary;
+    border-right: 2px solid $base-primary;
+    transform: rotate(-135deg);
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.pagination__link--next {
+  @media (min-width: $tablet-width) {
+    width: 124px;
+    text-align: right;
+    padding: 8px 24px 8px 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 18px;
+    left: 16px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid $base-primary;
+    border-right: 2px solid $base-primary;
+    transform: rotate(45deg);
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}

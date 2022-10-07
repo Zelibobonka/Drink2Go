@@ -9,15 +9,53 @@
 .user-list__item {
   display: flex;
   align-items: center;
-  margin-right: 34px;
-  padding: 5px;
+
+  &:not(:last-child) {
+    @media (min-width: $desktop-width) {
+      margin-right: 20px;
+    }
+  }
 }
 
 .user-list__login {
   display: flex;
+  justify-content: center;
   align-items: center;
+  min-width: 60px;
+  height: 60px;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 32px 20px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    @media (min-width: $desktop-width) {
+      color: $base-primary;
+      outline: none;
+      fill: $base-primary;
+    }
+  }
+
+  &:active {
+    background-color: $base-secondary;
+  }
 }
 
 .user-list__text {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    padding-left: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
 }

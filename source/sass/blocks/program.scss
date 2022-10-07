@@ -1,0 +1,63 @@
+.program__fieldset-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.program__button-holder {
+  padding: 6px 0 42px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+    margin-right: 53px;
+    padding: 9px 0 41px
+  }
+  @media (min-width: $desktop-width) {
+    justify-content: left;
+    margin-right: 0;
+  }
+}
+
+.program__button-submit {
+  margin: 0 auto;
+  margin-bottom: 24px;
+  padding: 10px 14px;
+  font-size: 13px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-right: 35px;
+    padding: 8px 3px;
+    letter-spacing: 0.04em;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 24px;
+    padding: 8px 6px;
+  }
+}
+
+.program__button-reset {
+  margin: 0 auto;
+  padding: 10px 21px;
+  font-size: 14px;
+  color: $base-primary;
+  background-color: $base-white;
+  border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 8px 5px;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+  }
+}

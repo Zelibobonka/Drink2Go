@@ -1,0 +1,26 @@
+.cards-list {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 349px 349px;
+    gap: 30px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 58px;
+  }
+}
+
+.cards-list__item {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}

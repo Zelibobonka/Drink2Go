@@ -1,0 +1,53 @@
+.footer-nav {
+  padding: 20px 0 28px;
+
+  @media (min-width: $desktop-width) {
+    padding: 10px 0 28px;
+  }
+}
+
+.footer-nav__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $base-primary;
+  letter-spacing: 0.02em;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 18px;
+  }
+}
+
+.footer-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer-nav__item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.footer-nav__link {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus-visible {
+    color: $primary-lighter;
+    outline: none;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+}
