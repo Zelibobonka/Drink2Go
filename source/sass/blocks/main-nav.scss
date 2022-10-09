@@ -21,4 +21,15 @@
   &:active {
     background-color: $base-secondary;
   }
+
+  &--closed {
+    min-width: 60px;
+    height: 60px;
+    padding: 0;
+    background-image: url("../img/icons/cross.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $base-white;
+    border: none;
+  }
 }

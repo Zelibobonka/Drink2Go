@@ -24,6 +24,8 @@
   min-width: 60px;
   height: 60px;
   text-decoration: none;
+  color: $base-black;
+  fill: $base-black;
 
   @media (min-width: $tablet-width) {
     height: 80px;

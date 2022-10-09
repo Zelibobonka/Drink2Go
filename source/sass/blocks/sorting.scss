@@ -71,6 +71,10 @@
   position: absolute;
   top: 40px;
   right: 0;
+
+  &--close {
+    display: none;
+  }
 }
 
 .sorting__list {

@@ -5,6 +5,10 @@
   @media (min-width: $desktop-width) {
     display: flex;
   }
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .product-card-full__link-image {
